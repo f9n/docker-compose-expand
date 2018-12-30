@@ -1,0 +1,27 @@
+version: "3"
+services:
+  api:
+    image: ef9n/supervisord:0.1.0
+    restart: on-failure
+    ports:
+      - "9001:9001"
+
+expand:
+  vars:
+    supervisors:
+      - name: products
+        port: 9002
+      - name: analysis
+        port: 9003
+      - name: monitoring
+        port: 9004
+  services:
+    - name: "{{ name }}"
+      service:
+        image: ef9n/supervisord:0.1.0
+        restart: on-failure
+        volumes:
+          - "/tmp/{{ name }}/:/opt/{{name}}/"
+        ports:
+          - "{{ port }}:9001"
+      loop: "{{ supervisors }}"
