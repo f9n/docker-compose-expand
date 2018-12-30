@@ -1,4 +1,11 @@
-# Docker Compose Expand
+# Docker Compose Expand  [![PyPi version](https://img.shields.io/pypi/v/docker-compose-expand.svg)](https://pypi.python.org/pypi/docker-compose-expand/) [![PyPI pyversions](https://img.shields.io/pypi/pyversions/docker-compose-expand.svg)](https://pypi.python.org/pypi/docker-compose-expand/)  [![](https://img.shields.io/github/license/f9n/docker-compose-expand.svg)](https://github.com/f9n/docker-compose-expand/blob/master/LICENSE)
+
+
+
+
+
+
+
 
 Expand your docker-compose.yml file with this tool.
 
